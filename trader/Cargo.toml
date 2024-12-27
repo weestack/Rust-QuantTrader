@@ -1,0 +1,17 @@
+[package]
+name = "Trader"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+keywords.workspace = true
+version.workspace = true
+readme.workspace = true
+categories.workspace = true
+publish.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true

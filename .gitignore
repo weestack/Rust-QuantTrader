@@ -1,0 +1,8 @@
+.env*
+*.json
+.idea
+/target/
+**/target/
+**/*.rs.bk
+*Cargo.lock
+**/examples/data

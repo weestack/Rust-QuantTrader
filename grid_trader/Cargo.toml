@@ -1,0 +1,17 @@
+[package]
+name = "GridTrader"
+version = "0.1.0"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+keywords.workspace = true
+publish.workspace = true
+
+[dependencies]
+reqwest = { version = "0.12.9", features = ["json"] }
+serde_json = "1.0.133"
+tokio = { version = "1.41.1", features = ["full"] }
+serde = { version = "1.0.215", features = ["derive"] }
+log = "0.4.22"

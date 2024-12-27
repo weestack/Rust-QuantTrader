@@ -1,0 +1,19 @@
+[package]
+name = "Strategies"
+authors.workspace = true
+edition.workspace = true
+homepage.workspace = true
+repository.workspace = true
+license.workspace = true
+keywords.workspace = true
+version.workspace = true
+readme.workspace = true
+categories.workspace = true
+publish.workspace = true
+
+[dependencies]
+Backtester = {workspace = true}
+polars = { workspace = true, features = ["lazy", "csv", "rolling_window", "rolling_window_by"]}
+
+[lints]
+workspace = true
