@@ -86,6 +86,7 @@ Your support will help me continue to develop these tools and create more useful
 
 - **Solana (SOL)**: `[EyE5XKNGB2o7JrpgbfdiF5RU9dWa5VQ4gekjgFQ1kFDv]`
 - **Ethereum (ETH)**: `[0x31bf3487139bed31a646ac5863e2fa115f5d9fee]`
+- **Telegram Handle** [[@weestack](https://t.me/weestack)] 
 
 ---
 
@@ -96,10 +97,10 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use it a
 ---
 
 ## Roadmap and TODO's
-
+- [ ] Store Portfolio values and daily values as Dataframe in some extraction, to make it faster for final data crunching
 - [ ] Refactor the **backtesting module** for better performance and modularity.
-- [ ] Implement candle streaming
-- 
+- [ ] Implement candle streaming.
+- [ ] Implement TA library and double top and bottom as the first patterns.
 - [ ] Add more exchange integrations (e.g., Kraken, Binance).
 
 ---

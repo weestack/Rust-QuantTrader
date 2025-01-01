@@ -12,7 +12,7 @@ categories.workspace = true
 publish.workspace = true
 
 [dependencies]
-polars = { workspace = true, features = ["lazy", "csv", "rolling_window", "rolling_window_by", "temporal", "dtype-datetime", "polars-time", "dtype-time"]}
+polars = { workspace = true, features = ["lazy", "csv", "rolling_window", "rolling_window_by", "temporal", "dtype-datetime", "polars-time", "dtype-time", "pct_change"]}
 serde_json = { workspace = true }
 
 [lints]

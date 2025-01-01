@@ -1,4 +1,7 @@
+use std::collections::HashMap;
 use polars::error::PolarsResult;
+use polars::export::arrow::array::iterator::ArrayAccessor;
+use polars::export::arrow::pushable::Pushable;
 use polars::prelude::{col, RollingOptionsFixedWindow};
 use Backtester::data::data::DataHandler;
 use Backtester::data::data::DataHandlerFetch;
@@ -44,4 +47,10 @@ fn main() -> PolarsResult<()> {
     Ok(
         ()
     )
+}
+
+
+pub fn is_palindrome(x: i32) -> bool {
+    let pal = x.to_string();
+    pal == pal.chars().rev().collect::<String>()
 }

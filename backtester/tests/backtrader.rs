@@ -6,18 +6,18 @@ mod tests {
     use Backtester::strategy::strategy::Strategy;
     use super::*;
 
+    /* TODO: Test case with two symbols */
+
+
+
     #[test]
     fn test_strategy_with_backtrader() -> PolarsResult<()> {
         println!("Booting strategy!");
-        use std::time::Instant;
 
-        let before = Instant::now();
         let symbol = "BTCUSDT";
         let start_date = "2023-01-01";
         let end_date = "2023-12-31";
         // TODO implement ticker! just a simple todo as if thats simple at all....
-
-        //let mut data = DataHandler::load_data("backtester/examples/data/btcusd_1-min_data.csv");
 
         let window_20 = RollingOptionsFixedWindow {
             window_size: 3,
@@ -43,30 +43,18 @@ mod tests {
             signal_expr
         );
 
-        // Shape strategy
-        // pass strategy to backtrader
-        // let backtrader run it candle by candle
-        // let backtrader fetch the data based on settings and perhaps chosen exchange?
-        // get performance from backtrader
-
-        //data = strategy.generate_signals(&mut data)?;
-
-        //let mut backtrader = Backtrader::new(1000.0, 0.001, 1.0);
-        //backtrader.backtest(data);
-        //backtrader.calculate_performance(false);
-
-        //println!("Indicators: {:?}", data);
         let mut backtrader = Backtrader::new(
             1000.0,
             0.001,
             1.0,
             vec![&"BTCUSDT".to_string()],
         );
+
         backtrader.backtest(Some("BTCUSDT".to_string()), strategy).unwrap();
 
-        println!("{:?}", backtrader);
+        backtrader.calculate_performance(false)?;
 
-        println!("Elapsed time: {:.2?}", before.elapsed());
+        println!("{:?}", backtrader);
         Ok(
             ()
         )
